@@ -34,7 +34,7 @@ return (
 
 function Poste(props) {
     return (
-        <div class="post">
+        <div data-test="post" class="post">
         <div class="topo">
             <div class="usuario">
                 <img src={props.imagem} />

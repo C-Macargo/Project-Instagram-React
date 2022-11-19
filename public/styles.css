@@ -230,6 +230,7 @@ body {
 .sidebar>.usuario {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .sidebar>.usuario img {
@@ -244,6 +245,9 @@ body {
     margin-left: 14px;
     font-weight: 300;
     color: #8E8E8E;
+    position: absolute;
+    left: 60px;
+    top : 10px;
 }
 
 .sidebar>.usuario .texto strong {
