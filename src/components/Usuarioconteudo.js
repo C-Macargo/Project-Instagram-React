@@ -21,7 +21,9 @@ return (
 
 function TrocarImagem(){
     const newimagelink = prompt("Insira o link de uma imagem") 
+    if (newimagelink != false){
     setUserImage(newimagelink);
+}
 }
 
 function TrocarNome(){
