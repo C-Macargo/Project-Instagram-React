@@ -297,6 +297,9 @@ body {
     color: #8E8E8E;
     font-weight: 400;
 }
+ion-icon[name="heart"] {
+    color: red;
+}
 
 .links,
 .copyright {

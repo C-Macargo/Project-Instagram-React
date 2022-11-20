@@ -9,7 +9,7 @@ let ConteudoPost =
         conteudo: "assets/img/gato-telefone.svg",
         likenome: "respondeai",
         likeimagem: "assets/img/respondeai.svg",
-        likenumero: "300",
+        likenumero: 300800,
         key: "meowed",
     },
     {
@@ -18,7 +18,7 @@ let ConteudoPost =
         conteudo: "assets/img/dog.svg",
         likenome: "adorable_animals",
         likeimagem: "assets/img/adorable_animals.svg",
-        likenumero: "450",
+        likenumero: 450555,
         key: "barked",
     },
 ]
@@ -30,13 +30,13 @@ function Poste(props) {
 
 /*Código para botar e tirar numero de likes*/
 
-const [likenumero, setLikeNumero] = React.useState(props.likenumero);
+const [likenumero, setLikeNumero] = React.useState(Number(props.likenumero));
 
 
 /*Código para botar e tirar coracão*/
     const [heart, setHeart] = React.useState("heart-outline");
     function CheckMarkHeart(){
-        let likenumero2 = Number(props.likenumero) + 1
+        let likenumero2 = props.likenumero + 1
         const FilledHeart = "heart"
         const UnfilledHeart = "heart-outline"
         setHeart (FilledHeart)
@@ -48,11 +48,10 @@ const [likenumero, setLikeNumero] = React.useState(props.likenumero);
     }
     
     function CheckMarkHeartPicture(){
-        let likenumero2 = Number(props.likenumero) + 1
+        let likenumero2 = props.likenumero + 1
         const FilledHeart = "heart"
         setHeart (FilledHeart)
         setLikeNumero (likenumero2)
-    
     }
 
 /*Código para botar e tirar bookmark*/
@@ -88,7 +87,7 @@ function CheckBookmark(){
         <div class="fundo">
             <div class="acoes">
                 <div>
-                    <ion-icon data-test="like-post" onClick={CheckMarkHeart} name={heart}></ion-icon>
+                    <ion-icon  data-test="like-post" onClick={CheckMarkHeart} name={heart} ></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
@@ -100,7 +99,7 @@ function CheckBookmark(){
             <div class="curtidas">
                 <img src={props.likeimagem} />
                 <div class="texto">
-                    Curtido por <strong>{props.likenome}</strong> e <strong data-test="likes-number">outras {likenumero} pessoas</strong>
+                    Curtido por <strong>{props.likenome}</strong> e <strong data-test="likes-number">outras {likenumero.toLocaleString("pt-br")} pessoas</strong>
                 </div>
             </div>
         </div>
