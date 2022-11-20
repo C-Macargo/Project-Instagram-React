@@ -8,7 +8,9 @@ export default function Usuariocontent(){
 
 const UserData = [ 
     {   
+        name:"catana",
         tag: "catanacomics",
+        img:"assets/img/catanacomics.svg"
     }
 ]
 
@@ -17,7 +19,6 @@ return (
         {UserData.map(user => < Usuarioz  tag={user.tag}/>)}
     </div>
 )
-
 
 function TrocarImagem(){
     const newimagelink = prompt("Insira o link de uma imagem") 
@@ -28,9 +29,10 @@ function TrocarImagem(){
 
 function TrocarNome(){
     const newName = prompt("Insira seu nome") 
+    if (newName != false){
     serUserName(newName);
+    }
 }
-
 
 function Usuarioz(props) {
     return (

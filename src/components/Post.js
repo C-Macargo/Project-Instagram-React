@@ -88,7 +88,7 @@ function CheckBookmark(){
         <div class="fundo">
             <div class="acoes">
                 <div>
-                    <ion-icon onClick={CheckMarkHeart} name={heart}></ion-icon>
+                    <ion-icon data-test="like-post" onClick={CheckMarkHeart} name={heart}></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
@@ -100,7 +100,7 @@ function CheckBookmark(){
             <div class="curtidas">
                 <img src={props.likeimagem} />
                 <div class="texto">
-                    Curtido por <strong>{props.likenome}</strong> e <strong>outras {likenumero} pessoas</strong>
+                    Curtido por <strong>{props.likenome}</strong> e <strong data-test="likes-number">outras {likenumero} pessoas</strong>
                 </div>
             </div>
         </div>
